@@ -27,10 +27,10 @@ export default {
   async asyncData({ app, params, $content }) {
     const { slug } = params
     const article = await $content('articles', app.i18n.locale, slug).fetch()
-    const [prev, next] = await $content('articles')
+    const [prev, next] = await $content('articles', app.i18n.locale)
       .only(['title', 'slug'])
       .sortBy('createdAt', 'asc')
-      .surround(params.slug)
+      .surround(slug)
       .fetch()
     return { article, prev, next }
   },
