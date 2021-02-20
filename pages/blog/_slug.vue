@@ -8,7 +8,7 @@
       </div>
       <div class="w-full">
         <p class="bg-pink-500 text-white inline-block py-2 px-3">
-          Tarih: {{ formatDate(article.createdAt) }}
+          {{ $t('date.date') }}: {{ formatDate(article.createdAt) }}
         </p>
       </div>
       <div class="w-full">

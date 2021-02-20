@@ -9,4 +9,7 @@ export default {
   messages: {
     welcome: 'Hoşgeldiniz',
   },
+  date: {
+    date: 'Tarih',
+  },
 }
