@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto space-y-10">
-    <h1 class="text-center text-3xl">Blog Posts</h1>
+    <h1 class="text-center text-3xl">{{ $t('pageHeader.blog') }}</h1>
     <ul class="lg:grid lg:grid-cols-2 lg:gap-4">
       <li class="" v-for="article of articles" :key="article.slug">
         <NuxtLink

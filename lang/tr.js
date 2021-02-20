@@ -12,4 +12,7 @@ export default {
   date: {
     date: 'Tarih',
   },
+  pageHeader: {
+    blog: 'Blog Yazıları',
+  },
 }
