@@ -24,8 +24,9 @@
 </template>
 <script>
 export default {
-  async asyncData({ $content, params }) {
-    const article = await $content('articles', params.slug).fetch()
+  async asyncData({ app, params, $content }) {
+    const { slug } = params
+    const article = await $content('articles', app.i18n.locale, slug).fetch()
     const [prev, next] = await $content('articles')
       .only(['title', 'slug'])
       .sortBy('createdAt', 'asc')
