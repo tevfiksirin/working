@@ -36,26 +36,31 @@
       <nuxt-link
         class="block px-2 py-1 font-semibold rounded hover:bg-orange-400"
         :to="localePath('/')"
+        @click.native="isOpen = !isOpen"
         >{{ $t('menu.homepage') }}</nuxt-link
       >
       <nuxt-link
         class="block px-2 py-1 mt-1 font-semibold rounded hover:bg-orange-400 sm:mt-0 sm:ml-2"
         :to="localePath('/dost')"
+        @click.native="isOpen = !isOpen"
         >{{ $t('menu.dude') }}</nuxt-link
       >
       <nuxt-link
         class="block px-2 py-1 mt-1 font-semibold rounded hover:bg-orange-400 sm:mt-0 sm:ml-2"
         :to="localePath('/work')"
+        @click.native="isOpen = !isOpen"
         >{{ $t('menu.work') }}</nuxt-link
       >
       <nuxt-link
         class="block px-2 py-1 mt-1 font-semibold rounded hover:bg-orange-400 sm:mt-0 sm:ml-2"
         :to="localePath('/lang')"
+        @click.native="isOpen = !isOpen"
         >{{ $t('menu.lang') }}</nuxt-link
       >
       <nuxt-link
         class="block px-2 py-1 mt-1 font-semibold rounded hover:bg-orange-400 sm:mt-0 sm:ml-2"
         :to="localePath('/menutest')"
+        @click.native="isOpen = !isOpen"
         >{{ $t('menu.menutest') }}</nuxt-link
       >
       <nuxt-link
@@ -63,6 +68,7 @@
         v-for="locale in availableLocales"
         :key="locale.code"
         :to="switchLocalePath(locale.code)"
+        @click.native="isOpen = !isOpen"
         >{{ locale.name }}</nuxt-link
       >
     </div>
