@@ -1,21 +1,23 @@
 <template>
-  <div class="container mx-auto text-center">
-    <article class="flex flex-col space-y-10">
-      <h1 class="text-3xl">{{ article.title }}</h1>
-      <p>{{ article.description }}</p>
-      <div class="max-w-xl mx-auto">
-        <img class="" :src="article.img" :alt="article.alt" />
-      </div>
+  <div class="pt-24">
+    <div class="container mx-auto text-center">
+      <article class="flex flex-col space-y-10">
+        <h1 class="text-3xl">{{ article.title }}</h1>
+        <p>{{ article.description }}</p>
+        <div class="max-w-xl mx-auto">
+          <img class="" :src="article.img" :alt="article.alt" />
+        </div>
 
-      <div class="w-full">
-        <prev-next
-          class="inline-block px-3 py-2 text-white"
-          :prev="prev"
-          :next="next"
-        />
-      </div>
-      <nuxt-content :document="article" />
-    </article>
+        <div class="w-full">
+          <prev-next
+            class="inline-block px-3 py-2 text-white"
+            :prev="prev"
+            :next="next"
+          />
+        </div>
+        <nuxt-content :document="article" />
+      </article>
+    </div>
   </div>
 </template>
 <script>
