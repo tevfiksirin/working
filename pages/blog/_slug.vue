@@ -9,7 +9,7 @@
 
       <div class="w-full">
         <prev-next
-          class="text-white inline-block py-2 px-3"
+          class="inline-block px-3 py-2 text-white"
           :prev="prev"
           :next="next"
         />
@@ -25,7 +25,7 @@ export default {
     const article = await $content('articles', app.i18n.locale, slug).fetch()
     const [prev, next] = await $content('articles', app.i18n.locale)
       .only(['title', 'slug'])
-      .sortBy('createdAt', 'asc')
+      .sortBy('createdAt', 'desc')
       .surround(slug)
       .fetch()
     return { article, prev, next }
