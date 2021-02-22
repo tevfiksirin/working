@@ -1,6 +1,6 @@
 <template>
   <header
-    class="bg-gray-200 sm:flex sm:justify-between sm:items-center sm:px-4 sm:py-3"
+    class="fixed z-10 min-w-full bg-gray-200 sm:flex sm:justify-between sm:items-center sm:px-4 sm:py-3"
   >
     <div class="flex items-center justify-between px-4 py-3 sm:p-0">
       <div>
