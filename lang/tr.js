@@ -15,4 +15,19 @@ export default {
   pageHeader: {
     blog: 'Blog Yazıları',
   },
+  slider: {
+    general: {
+      title: 'Genel Slogan',
+      title2: 'Genel Slogan 2',
+    },
+    slide2: {
+      subTitle: 'Açıklama 1',
+    },
+    slide3: {
+      subTitle: 'Açıklama 2',
+    },
+    slide4: {
+      subTitle: 'Açıklama 3',
+    },
+  },
 }
