@@ -6,11 +6,7 @@
       <div class="max-w-xl mx-auto">
         <img class="" :src="article.img" :alt="article.alt" />
       </div>
-      <div class="w-full">
-        <p class="bg-pink-500 text-white inline-block py-2 px-3">
-          {{ $t('date.date') }}: {{ formatDate(article.createdAt) }}
-        </p>
-      </div>
+
       <div class="w-full">
         <prev-next
           class="text-white inline-block py-2 px-3"
@@ -33,18 +29,6 @@ export default {
       .surround(slug)
       .fetch()
     return { article, prev, next }
-  },
-  methods: {
-    formatDate(date) {
-      const options = {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-        hour: 'numeric',
-        minute: '2-digit',
-      }
-      return new Date(date).toLocaleDateString('tr', options)
-    },
   },
 }
 </script>
