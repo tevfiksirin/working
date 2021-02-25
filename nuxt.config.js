@@ -26,6 +26,7 @@ export default {
   plugins: [
     { src: '~/plugins/i18n.js' },
     { src: '@/plugins/nuxt-swiper-plugin.js', mode: 'client' },
+    { src: '~plugins/v-img.client.js' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -35,6 +36,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/date-fns',
   ],
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',
@@ -77,5 +79,8 @@ export default {
   content: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    transpile: ['vue-final-modal'],
+    vendor: ['vue-swal'],
+  },
 }

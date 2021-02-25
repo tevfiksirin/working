@@ -13,10 +13,14 @@
     "core-js": "^3.8.3",
     "nuxt": "^2.14.12",
     "nuxt-i18n": "^6.20.2",
+    "nuxt-tailvue": "^1.0.68",
     "swiper": "5.x",
-    "vue-awesome-swiper": "^4.1.1"
+    "v-img": "^0.2.0",
+    "vue-awesome-swiper": "^4.1.1",
+    "vue-cool-lightbox": "^2.7.1"
   },
   "devDependencies": {
+    "@nuxtjs/date-fns": "^1.4.3",
     "@nuxtjs/tailwindcss": "^3.4.2",
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-prettier": "^3.3.1",
