@@ -48,7 +48,6 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
     'nuxt-i18n',
-    ['nuxt-tailvue', { modal: true }],
   ],
   i18n: {
     locales: [
