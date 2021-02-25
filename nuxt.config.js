@@ -26,6 +26,7 @@ export default {
   plugins: [
     { src: '~/plugins/i18n.js' },
     { src: '@/plugins/nuxt-swiper-plugin.js', mode: 'client' },
+    { src: '~plugins/v-img.client.js' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -47,6 +48,7 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
     'nuxt-i18n',
+    ['nuxt-tailvue', { modal: true }],
   ],
   i18n: {
     locales: [
@@ -77,5 +79,8 @@ export default {
   content: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    transpile: ['vue-final-modal'],
+    vendor: ['vue-swal'],
+  },
 }
