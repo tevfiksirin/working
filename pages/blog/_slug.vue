@@ -6,6 +6,9 @@
         <p>{{ article.description }}</p>
         <div class="max-w-xl mx-auto">
           <img class="" :src="article.img" :alt="article.alt" />
+          <p class="text-sm text-gray-700">
+            {{ $t('date.date') }} : {{ article.createdAt | formatDate }}
+          </p>
         </div>
 
         <div class="w-full">
@@ -21,7 +24,14 @@
   </div>
 </template>
 <script>
+import { format } from 'date-fns'
+
 export default {
+  filters: {
+    formatDate() {
+      return format(new Date(), 'dd MMM yyyy')
+    },
+  },
   async asyncData({ app, params, $content }) {
     const { slug } = params
     const article = await $content('articles', app.i18n.locale, slug).fetch()
