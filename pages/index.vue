@@ -28,12 +28,18 @@
   </div>
 </template>
 <script>
+import { format } from 'date-fns'
 export default {
+  filters: {
+    formatDate() {
+      return format(new Date(), 'dd MMM yyyy')
+    },
+  },
   async asyncData({ app, params, $content }) {
     const { slug } = params
     const articles = await $content('articles', app.i18n.locale, slug)
       .only(['title', 'description', 'img', 'slug'])
-      .sortBy('createdAt', 'desc')
+      .sortBy('formatDate', 'asc')
       .fetch()
 
     return {
