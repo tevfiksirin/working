@@ -62,7 +62,7 @@
       </div>
     </template>
     <template slot="next">
-      <div class="w-8 h-8">
+      <div class="w-8 h-8 text-white bg-blue-400 hover:bg-yellow-500">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -95,7 +95,7 @@ export default {
 </script>
 <style>
 .slither-slider-controls {
-  position: fixed;
+  position: absolute;
   width: 100%;
   display: flex;
   justify-content: space-between;
