@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Slider />
+    <Hu />
     <div class="container mx-auto space-y-10">
       <h1 class="text-3xl text-center">{{ $t('pageHeader.blog') }}</h1>
       <ul class="lg:grid lg:grid-cols-2 lg:gap-4">
@@ -19,7 +19,7 @@
                 <h2>{{ article.title }}</h2>
                 <!-- <p>by {{ article.author.name }}</p> -->
                 <p>{{ article.description }}</p>
-                {{ $t('date.date') }} : {{ article.createdAt | formatDate }}
+                <!-- {{ $t('date.date') }} : {{ article.createdAt | formatDate }} -->
               </div>
             </div>
           </NuxtLink>
@@ -29,13 +29,7 @@
   </div>
 </template>
 <script>
-import { format } from 'date-fns'
 export default {
-  filters: {
-    formatDate() {
-      return format(new Date(), 'dd MMM yyyy')
-    },
-  },
   async asyncData({ app, params, $content }) {
     const { slug } = params
     const articles = await $content('articles', app.i18n.locale, slug)

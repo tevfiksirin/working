@@ -11,16 +11,14 @@
   "dependencies": {
     "@nuxt/content": "^1.11.1",
     "core-js": "^3.8.3",
+    "date-fns": "^2.18.0",
     "nuxt": "^2.14.12",
     "nuxt-i18n": "^6.20.2",
-    "nuxt-tailvue": "^1.0.68",
-    "swiper": "5.x",
-    "v-img": "^0.2.0",
-    "vue-awesome-swiper": "^4.1.1",
-    "vue-cool-lightbox": "^2.7.1"
+    "slither-slider": "^2.6.1",
+    "v-animate-css": "^0.0.3",
+    "v-img": "^0.2.0"
   },
   "devDependencies": {
-    "@nuxtjs/date-fns": "^1.4.3",
     "@nuxtjs/tailwindcss": "^3.4.2",
     "eslint-config-prettier": "^7.2.0",
     "eslint-plugin-prettier": "^3.3.1",
