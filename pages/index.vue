@@ -19,6 +19,7 @@
                 <h2>{{ article.title }}</h2>
                 <!-- <p>by {{ article.author.name }}</p> -->
                 <p>{{ article.description }}</p>
+                {{ $t('date.date') }} : {{ article.createdAt | formatDate }}
               </div>
             </div>
           </NuxtLink>
@@ -39,7 +40,7 @@ export default {
     const { slug } = params
     const articles = await $content('articles', app.i18n.locale, slug)
       .only(['title', 'description', 'img', 'slug'])
-      .sortBy('formatDate', 'asc')
+      .sortBy('createdAt', 'desc')
       .fetch()
 
     return {
