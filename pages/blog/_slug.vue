@@ -29,7 +29,7 @@ import { format } from 'date-fns'
 export default {
   filters: {
     formatDate() {
-      return format(new Date(), 'dd MMM yyyy')
+      return format(new Date(), 'dd/MM/yyyy')
     },
   },
   async asyncData({ app, params, $content }) {
