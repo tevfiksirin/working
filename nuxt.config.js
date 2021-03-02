@@ -70,13 +70,7 @@ export default {
     vueI18n: {
       fallbackLocale: 'tr',
     },
-    detectBrowserLanguage: {
-      useCookie: true,
-      cookieKey: 'i18n_redirected',
-      cookieCrossOrigin: true,
-      alwaysRedirect: true,
-      onlyOnRoot: true, // recommended
-    },
+    detectBrowserLanguage: false,
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
