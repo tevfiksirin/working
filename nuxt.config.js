@@ -6,7 +6,7 @@ export default {
   head: {
     title: 'working',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'tr',
     },
     meta: [
       { charset: 'utf-8' },
@@ -74,6 +74,7 @@ export default {
       useCookie: true,
       cookieKey: 'i18n_redirected',
       cookieCrossOrigin: true,
+      alwaysRedirect: true,
       onlyOnRoot: true, // recommended
     },
   },
