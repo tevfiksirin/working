@@ -34,12 +34,16 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@aceforth/nuxt-optimized-images',
   ],
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',
     configPath: 'tailwind.config.js',
     exposeConfig: false,
     config: {},
+  },
+  optimizedImages: {
+    optimizeImages: true,
   },
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
