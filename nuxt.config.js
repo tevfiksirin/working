@@ -34,7 +34,6 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
-    '@aceforth/nuxt-optimized-images',
   ],
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',
