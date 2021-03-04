@@ -1,21 +1,52 @@
 <template>
-  <div>
-    <div class="flex items-center justify-center h-64 bg-orange-600">
-      <h1 class="pt-16 pb-16 text-5xl text-white">{{ $t('menu.work') }}</h1>
+  <section class="">
+    <div class="container mx-auto">
+      <div class="flex flex-wrap justify-center gap-2">
+        <div class="w-3/4 mt-16 mb-16 sm:h-32 sm:w-1/4">
+          <a href="/img/first.jpg" class="resim">
+            <nuxt-img
+              format="webp"
+              src="/img/first.jpg"
+              sizes="sm:100vw md:50vw lg:400px"
+              class="shadow-lg rounded-2xl hover:shadow-2xl"
+              alt="Suda Eriyen Nakış Telası"
+            />
+          </a>
+        </div>
+        <div class="w-3/4 mt-16 mb-16 sm:h-32 sm:w-1/4">
+          <a href="/img/second.jpg" class="resim">
+            <nuxt-img
+              format="webp"
+              sizes="sm:100vw md:50vw lg:400px"
+              src="/img/second.jpg"
+              class="shadow-lg rounded-2xl hover:shadow-2xl"
+              alt="Suda Eriyen Nakış Telası"
+            />
+          </a>
+        </div>
+        <div class="w-3/4 mt-16 mb-16 sm:h-32 sm:w-1/4">
+          <a href="/img/third.jpg" class="resim">
+            <nuxt-img
+              format="webp"
+              sizes="sm:100vw md:50vw lg:400px"
+              src="/img/third.jpg"
+              class="shadow-lg rounded-2xl hover:shadow-2xl"
+              alt="Suda Eriyen Nakış Telası"
+            />
+          </a>
+        </div>
+      </div>
     </div>
-    <div class="container p-16 mx-auto">
-      <img v-img:group class="object-cover w-64 h-64" src="/img/first.jpg" />
-      <img v-img:group class="object-cover w-64 h-64" src="/img/second.jpg" />
-    </div>
-    <div class="relative" style="padding-top: 56.25%">
-      <iframe
-        class="absolute inset-0 w-full h-full p-16"
-        src="https://www.youtube-nocookie.com/embed/FMrtSHAAPhM"
-        frameborder="0"
-      ></iframe>
-    </div>
-  </div>
+  </section>
 </template>
 <script>
-export default {}
+export default {
+  mounted() {
+    new GLightbox({
+      selector: '.resim',
+      touchNavigation: true,
+      loop: true,
+    })
+  },
+}
 </script>
