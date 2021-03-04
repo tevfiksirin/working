@@ -13,7 +13,14 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href: '/glightbox/glightbox.min.css',
+      },
+    ],
+    script: [{ src: '/glightbox/glightbox.min.js', body: true }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -34,7 +41,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
-    '@aceforth/nuxt-optimized-images',
+    '@nuxt/image',
   ],
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',
@@ -42,15 +49,23 @@ export default {
     exposeConfig: false,
     config: {},
   },
-  optimizedImages: {
-    optimizeImages: true,
-  },
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
     'nuxt-i18n',
   ],
+  image: {
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536,
+      '2xl': 1536,
+    },
+  },
   i18n: {
     locales: [
       {
