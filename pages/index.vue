@@ -34,7 +34,7 @@ export default {
     const { slug } = params
     const articles = await $content('articles', app.i18n.locale, slug)
       .only(['title', 'description', 'img', 'slug'])
-      .sortBy('createdAt', 'desc')
+      .sortBy('sorting', 'desc')
       .fetch()
 
     return {
