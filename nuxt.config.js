@@ -20,7 +20,15 @@ export default {
         href: '/glightbox/glightbox.min.css',
       },
     ],
-    script: [{ src: '/glightbox/glightbox.min.js', body: true }],
+    script: [
+      { src: '/glightbox/glightbox.min.js', body: true },
+      {
+        src: 'https://unpkg.com/colcade@0/colcade.js',
+        body: true,
+        async: true,
+        defer: true,
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
