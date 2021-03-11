@@ -5,7 +5,7 @@
         <nuxt-img
           format="webp"
           :src="item.src"
-          sizes="sm:100vw md:50vw lg:400px"
+          sizes="sm:100px md:180px lg:320px"
           class="shadow-lg hover:shadow-2xl"
           :alt="item.alt"
         />
@@ -105,10 +105,6 @@ export default {
 </script>
 
 <style>
-body {
-  font: 1.1em Arial, Helvetica, sans-serif;
-}
-
 img {
   max-width: 100%;
   display: block;
@@ -128,7 +124,7 @@ figure > img {
 }
 
 .container {
-  column-count: 5;
+  column-count: 4;
   column-gap: 2px;
 }
 </style>
