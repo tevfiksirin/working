@@ -26,6 +26,7 @@
         </li>
       </ul>
     </div>
+    <ModelGallery />
   </div>
 </template>
 <script>
