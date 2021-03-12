@@ -3,7 +3,7 @@
     <div class="container mx-auto">
       <div class="flex flex-wrap justify-center gap-2">
         <div class="w-3/4 mt-16 mb-16 sm:h-32 sm:w-1/4">
-          <a href="/img/first.jpg" class="resim">
+          <a href="/video/tanitimTR.mp4" class="resim">
             <nuxt-img
               format="webp"
               src="/img/first.jpg"

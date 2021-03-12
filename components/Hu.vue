@@ -4,26 +4,16 @@
     <div
       class="flex items-center justify-center text-white bg-red-600 slideHeight"
     >
-      <iframe
-        v-if="$i18n.locale == 'en'"
-        width="560"
-        height="315"
-        v-animate-css="animationObject"
-        src="https://www.youtube.com/embed/HQmmM_qwG4k"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
-      <iframe
-        v-if="$i18n.locale == 'tr'"
-        width="560"
-        height="315"
-        v-animate-css="animationObject"
-        src="https://www.youtube.com/embed/nxYwlARAxwQ"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
+      <div v-if="$i18n.locale == 'tr'" v-animate-css="animationObject">
+        <video width="320" height="240" controls>
+          <source src="/video/tanitimTR.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div v-if="$i18n.locale == 'en'" v-animate-css="animationObject">
+        <video width="320" height="240" controls>
+          <source src="/video/tanitimTR.mp4" type="video/mp4" />
+        </video>
+      </div>
     </div>
 
     <!-- Slide 2 -->
@@ -90,6 +80,13 @@ export default {
         duration: 2000,
       },
     }
+  },
+  mounted() {
+    new GLightbox({
+      selector: '.video',
+      touchNavigation: true,
+      loop: true,
+    })
   },
 }
 </script>
