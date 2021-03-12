@@ -2,7 +2,7 @@
   <slither-slider :options="{ fullscreen: true, dots: false }">
     <!-- Slide 1 -->
     <div
-      class="flex items-center justify-center text-white bg-red-600 h-min-screen"
+      class="flex items-center justify-center text-white bg-red-600 slideHeight"
     >
       <iframe
         v-if="$i18n.locale == 'en'"
@@ -28,7 +28,7 @@
 
     <!-- Slide 2 -->
     <div
-      class="flex items-center justify-center text-white bg-indigo-600 h-min-screen"
+      class="flex items-center justify-center text-white bg-indigo-600 slideHeight"
     >
       Mah
       <img
@@ -39,7 +39,7 @@
 
     <!-- Slide 3 -->
     <div
-      class="flex items-center justify-center text-white bg-yellow-600 h-min-screen"
+      class="flex items-center justify-center text-white bg-yellow-600 slideHeight"
     >
       <p class="text-5xl" v-animate-css="animationObject">Gawd</p>
     </div>
@@ -100,5 +100,8 @@ export default {
   display: flex;
   justify-content: space-between;
   top: 50%;
+}
+.slideHeight {
+  height: 100vh;
 }
 </style>
