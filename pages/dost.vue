@@ -1,5 +1,5 @@
 <template>
-  <div class="container pt-24 mx-auto">
+  <div class="container pt-24 mx-auto masonryWrapper">
     <figure :key="index" v-for="(item, index) in data">
       <a :href="item.src" class="resim">
         <nuxt-img
@@ -123,7 +123,7 @@ figure > img {
   grid-column: 1;
 }
 
-.container {
+.masonryWrapper {
   column-count: 4;
   column-gap: 2px;
 }
