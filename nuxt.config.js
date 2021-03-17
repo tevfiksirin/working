@@ -42,6 +42,7 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxt/image',
+    'nuxt-use-motion',
   ],
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',
@@ -49,6 +50,7 @@ export default {
     exposeConfig: false,
     config: {},
   },
+  motion: {},
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/content
