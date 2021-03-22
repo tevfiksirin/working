@@ -81,13 +81,6 @@ export default {
       },
     }
   },
-  mounted() {
-    new GLightbox({
-      selector: '.video',
-      touchNavigation: true,
-      loop: true,
-    })
-  },
 }
 </script>
 <style>
