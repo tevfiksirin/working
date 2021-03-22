@@ -41,10 +41,12 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxt/postcss8',
     '@nuxt/image',
     'nuxt-use-motion',
   ],
   tailwindcss: {
+    jit: true,
     cssPath: '~/assets/css/tailwind.css',
     configPath: 'tailwind.config.js',
     exposeConfig: false,
