@@ -5,6 +5,7 @@ export default {
     work: 'Work',
     lang: 'Lang',
     menutest: 'Menu Test',
+    blog: 'Blog',
   },
   messages: {
     welcome: 'Welcome',
