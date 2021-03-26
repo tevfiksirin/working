@@ -35,7 +35,7 @@
             <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z" />
           </svg>
           <NuxtLink
-            :to="`/${link}`"
+            :to="localePath(`/${link}`)"
             class="ml-4 text-sm font-medium text-gray-800 dark:text-gray-400 hover:text-gray-700"
           >
             {{ link }}
