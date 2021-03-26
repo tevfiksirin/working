@@ -125,6 +125,9 @@ figure > img {
 
 .masonryWrapper {
   column-count: 4;
-  column-gap: 2px;
+  column-gap: 1px;
+}
+.container {
+  @apply 2xl:max-w-7xl;
 }
 </style>

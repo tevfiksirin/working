@@ -1,6 +1,7 @@
 <template>
   <div class="pt-24">
     <div class="container mx-auto text-center">
+      <BreadCrumb :link="$t('menu.blog')" :title="article.title" />
       <article class="flex flex-col space-y-10">
         <h1 class="text-3xl">{{ article.title }}</h1>
         <p>{{ article.description }}</p>
@@ -37,7 +38,7 @@ export default {
     const article = await $content('articles', app.i18n.locale, slug).fetch()
     const [prev, next] = await $content('articles', app.i18n.locale)
       .only(['title', 'slug'])
-      .sortBy('createdAt', 'desc')
+      .sortBy('sorting', 'desc')
       .surround(slug)
       .fetch()
     return { article, prev, next }

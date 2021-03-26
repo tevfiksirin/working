@@ -5,6 +5,7 @@ export default {
     work: 'Çalışma',
     lang: 'Dil',
     menutest: 'Menü Test',
+    blog: 'Blog',
   },
   messages: {
     welcome: 'Hoşgeldiniz',
