@@ -65,6 +65,12 @@
       >
       <nuxt-link
         class="block px-2 py-1 mt-1 font-semibold rounded hover:bg-orange-400 sm:mt-0 sm:ml-2"
+        :to="localePath('/blog')"
+        @click.native="isOpen = !isOpen"
+        >{{ $t('menu.blog') }}</nuxt-link
+      >
+      <nuxt-link
+        class="block px-2 py-1 mt-1 font-semibold rounded hover:bg-orange-400 sm:mt-0 sm:ml-2"
         v-for="locale in availableLocales"
         :key="locale.code"
         :to="switchLocalePath(locale.code)"
