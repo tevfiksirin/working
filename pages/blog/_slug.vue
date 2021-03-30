@@ -13,11 +13,7 @@
         </div>
 
         <div class="w-full">
-          <prev-next
-            class="inline-block px-3 py-2 text-white"
-            :prev="prev"
-            :next="next"
-          />
+          <prev-next class="px-3 py-2 text-white" :prev="prev" :next="next" />
         </div>
         <nuxt-content :document="article" />
       </article>

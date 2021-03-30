@@ -4,12 +4,12 @@
     <div
       class="flex items-center justify-center text-white bg-red-600 slideHeight"
     >
-      <div v-if="$i18n.locale == 'tr'" v-animate-css="animationObject">
+      <div v-if="$i18n.locale == 'tr'" class="merhaba">
         <video width="320" height="240" controls>
           <source src="/video/tanitimTR.mp4" type="video/mp4" />
         </video>
       </div>
-      <div v-if="$i18n.locale == 'en'" v-animate-css="animationObject">
+      <div v-if="$i18n.locale == 'en'" class="merhaba">
         <video width="320" height="240" controls>
           <source src="/video/tanitimTR.mp4" type="video/mp4" />
         </video>
@@ -20,18 +20,24 @@
     <div
       class="flex items-center justify-center text-white bg-indigo-600 slideHeight"
     >
-      Mah
-      <img
-        v-animate-css="animationObject"
-        src="https://picsum.photos/id/237/200/300"
-      />
+      <img class="merhaba" src="https://picsum.photos/id/237/200/300" />
     </div>
 
     <!-- Slide 3 -->
     <div
       class="flex items-center justify-center text-white bg-yellow-600 slideHeight"
     >
-      <p class="text-5xl" v-animate-css="animationObject">Gawd</p>
+      <p class="text-5xl merhaba">Gawd</p>
+    </div>
+    <div
+      class="flex items-center justify-center text-white bg-yellow-600 slideHeight"
+    >
+      <div class="h-64 bg-indigo-300 merhaba">
+        <h2 class="text-5xl">
+          Designing awesome brands <br />
+          experiences
+        </h2>
+      </div>
     </div>
 
     <template slot="previous">
@@ -69,14 +75,13 @@
       </div> </template
   ></slither-slider>
 </template>
-  </slither-slider>
-</template>
+
 <script>
 export default {
   data() {
     return {
       animationObject: {
-        classes: 'slideInUp',
+        classes: 'merhaba',
         duration: 2000,
       },
     }
@@ -93,5 +98,35 @@ export default {
 }
 .slideHeight {
   height: 100vh;
+}
+.merhaba {
+  -webkit-animation-name: merhaba;
+  animation-name: merhaba;
+  -webkit-animation-duration: 1.8s;
+  animation-duration: 1.8s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes merhaba {
+  0% {
+    -webkit-transform: translateY(1000%);
+    transform: translateY(1000%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@keyframes merhaba {
+  0% {
+    -webkit-transform: translateY(1000%);
+    transform: translateY(1000%);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
 }
 </style>

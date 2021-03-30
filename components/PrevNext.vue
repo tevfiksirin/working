@@ -3,7 +3,7 @@
     <NuxtLink
       v-if="prev"
       :to="localePath({ name: 'blog-slug', params: { slug: prev.slug } })"
-      class="bg-indigo-500 font-bold hover:underline"
+      class="font-bold bg-indigo-500 hover:underline"
     >
       {{ prev.title }}
     </NuxtLink>
@@ -11,7 +11,7 @@
     <NuxtLink
       v-if="next"
       :to="localePath({ name: 'blog-slug', params: { slug: next.slug } })"
-      class="bg-yellow-500 font-bold hover:underline"
+      class="font-bold bg-yellow-500 hover:underline"
     >
       {{ next.title }}
     </NuxtLink>
