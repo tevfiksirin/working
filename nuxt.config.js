@@ -59,6 +59,10 @@ export default {
     '@nuxt/content',
     'nuxt-i18n',
   ],
+  // Storybook config
+  storybook: {
+    addons: ['@storybook/addon-a11y', '@storybook/addon-controls'],
+  },
   image: {
     screens: {
       xs: 320,
