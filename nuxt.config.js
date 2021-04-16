@@ -62,6 +62,13 @@ export default {
   // Storybook config
   storybook: {
     addons: ['@storybook/addon-a11y', '@storybook/addon-controls'],
+    stories: [],
+    parameters: {
+      viewMode: 'docs',
+    },
+    webpackFinal(config) {
+      return config
+    },
   },
   image: {
     screens: {
