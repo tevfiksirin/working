@@ -59,6 +59,17 @@ export default {
     '@nuxt/content',
     'nuxt-i18n',
   ],
+  // Storybook config
+  storybook: {
+    addons: ['@storybook/addon-a11y', '@storybook/addon-controls'],
+    stories: [],
+    parameters: {
+      viewMode: 'docs',
+    },
+    webpackFinal(config) {
+      return config
+    },
+  },
   image: {
     screens: {
       xs: 320,
