@@ -46,7 +46,6 @@ export default {
     'nuxt-use-motion',
   ],
   tailwindcss: {
-    jit: true,
     cssPath: '~/assets/css/tailwind.css',
     configPath: 'tailwind.config.js',
     exposeConfig: false,
