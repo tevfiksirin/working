@@ -6,7 +6,7 @@ export default {
     type: {
       control: {
         type: 'select',
-        options: ['primary', 'secondary'],
+        options: ['primary', 'secondary', 'hu'],
       },
       defaultValue: 'primary',
     },

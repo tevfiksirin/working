@@ -30,6 +30,8 @@ export default {
         classes.push('bg-blue-500 text-gray-900 hover:bg-blue-700')
       } else if (this.type === 'secondary') {
         classes.push('bg-gray-500 hover:bg-gray-700')
+      } else if (this.type === 'hu') {
+        classes.push('bg-indigo-500 hover:bg-red-700')
       }
       return classes.join(' ')
     },
