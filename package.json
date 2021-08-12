@@ -10,9 +10,9 @@
   },
   "dependencies": {
     "@nuxt/content": "^1.14.0",
-    "core-js": "^3.16.0",
+    "core-js": "^3.16.1",
     "date-fns": "^2.23.0",
-    "nuxt": "^2.15.7",
+    "nuxt": "^2.15.8",
     "nuxt-i18n": "^6.28.1",
     "slither-slider": "^2.11.0",
     "v-animate-css": "^0.0.3",
