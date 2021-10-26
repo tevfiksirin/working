@@ -46,7 +46,6 @@ export default {
     'nuxt-use-motion',
   ],
   tailwindcss: {
-    jit: true,
     cssPath: '~/assets/css/tailwind.css',
     configPath: 'tailwind.config.js',
     exposeConfig: false,
@@ -59,6 +58,17 @@ export default {
     '@nuxt/content',
     'nuxt-i18n',
   ],
+  // Storybook config
+  storybook: {
+    addons: ['@storybook/addon-a11y', '@storybook/addon-controls'],
+    stories: [],
+    parameters: {
+      viewMode: 'docs',
+    },
+    webpackFinal(config) {
+      return config
+    },
+  },
   image: {
     screens: {
       xs: 320,
